@@ -2,11 +2,11 @@ var gulp = require('gulp');
 var concat = require('gulp-concat');
 var stylus = require('gulp-stylus')
 
-gulp.task('stulus', function(){
+gulp.task('stylus', function(){
     gulp.src('/application/css/style.styl')
     .pipe(stylus('style.css'))
-    .pipe(gulp.dest('./dist'))
-})
+    .pipe(gulp.dest('./dist/css'))
+});
 
 gulp.task('concat-js', function () {
     gulp.src([
@@ -29,4 +29,4 @@ gulp.task('watch', function () {
     gulp.watch(['./application/js/**/*.js'], ['default']);
 });
 
-gulp.task('default', ['concat-js']);
+gulp.task('default', ['concat-js', 'stylus']);
