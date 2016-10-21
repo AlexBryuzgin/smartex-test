@@ -1,0 +1,26 @@
+{
+  "name": "smartex-test",
+  "description": "smartex-test task",
+  "main": "app.js",
+  "authors": [
+    "Alex Bryuzgin"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/AlexBryuzgin/smartex-test",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "^1.5.8",
+    "angular-resource": "^1.5.8",
+    "angular-route": "^1.5.8",
+    "jquery": "^3.1.1",
+    "angular-local-storage": "^0.5.2",
+    "angular-aria": "^1.5.8",
+    "angular-animate": "^1.5.8"
+  }
+}
