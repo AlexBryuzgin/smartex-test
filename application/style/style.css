@@ -25,10 +25,15 @@
 	height: 30px;
 	border: 2px solid #5f82ba;
 }
+.user-list li:hover{
+	background-color: #a6a6a6;
+	cursor: pointer;
+}
 .user-list span{
 	font-size: 16px;
 	display: block;
 	line-height: 30px;
+	font-family: Arial
 }
 .table{
 	display: table;
@@ -38,10 +43,63 @@
 .tr{
 	display: table-row;
 }
+.tr:first-child .tc{
+	background-color: #d6d6d6;
+}
+.tr:first-child .tc span{
+	font-weight: bold;
+}
+.tr:not(:first-child):hover .tc{
+	background-color: #a6a6a6;
+	cursor: pointer;
+}
 .tc{
 	display: table-cell;
 	text-align: center;
 	width: 20%;
 	height: 30px;
 	border:1px solid #000;
+}
+.tc span{
+	display: block;
+	line-height: 30px;
+	font-family: Arial
+}
+
+.black{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0,0,0,0.5);
+}
+.pop-up{
+	position: absolute;
+	width: 500px;
+	height: 5S00px;
+	padding: 10px;
+	background-color: #fff;
+	left: calc((100% - 500px) / 2);
+	top: calc((100% - 500px) / 2);
+}
+.pop-up .name{
+	margin: 0;
+	text-align: center;
+}
+.pop-up .info,
+.pop-up .address,
+.pop-up .company {
+	width: 100%;
+	border: 1px solid #23ac62;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 10px;
+}
+.pop-up .info p:first-child,
+.pop-up .address p:first-child,
+.pop-up .company p:first-child{
+	font-weight: bold;
+	font-size: 16px;
+	font-family: Arial;
 }
