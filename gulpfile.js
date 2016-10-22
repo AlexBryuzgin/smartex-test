@@ -1,12 +1,12 @@
 var gulp = require('gulp');
 var concat = require('gulp-concat');
-var stylus = require('gulp-stylus')
+// var stylus = require('gulp-stylus');
 
-gulp.task('stylus', function(){
-    gulp.src('/application/css/style.styl')
-    .pipe(stylus('style.css'))
-    .pipe(gulp.dest('./dist/css'))
-});
+// gulp.task('stylus', function(){
+//     gulp.src('/application/css/style.styl')
+//     .pipe(stylus())
+//     .pipe(gulp.dest('./dist/css'))
+// });
 
 gulp.task('concat-js', function () {
     gulp.src([
@@ -29,4 +29,4 @@ gulp.task('watch', function () {
     gulp.watch(['./application/js/**/*.js'], ['default']);
 });
 
-gulp.task('default', ['concat-js', 'stylus']);
+gulp.task('default', ['concat-js']);
