@@ -1,0 +1,47 @@
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+.title{
+	margin-top: 20px;
+	font-size: 20px;
+	text-align: center;
+}
+.name{
+	font-size: 20px;
+	text-align: center;
+	margin: 40px 0;
+}
+.user-list{
+	margin-left: 20px;
+	margin-top: 20px;
+}
+.user-list li{
+	margin: 0;
+	padding: 0 0 0 10px;
+	list-style: none;
+	width: 200px;
+	height: 30px;
+	border: 2px solid #5f82ba;
+}
+.user-list span{
+	font-size: 16px;
+	display: block;
+	line-height: 30px;
+}
+.table{
+	display: table;
+	width: 100%;
+	padding: 0 30px;
+}
+.tr{
+	display: table-row;
+}
+.tc{
+	display: table-cell;
+	text-align: center;
+	width: 20%;
+	height: 30px;
+	border:1px solid #000;
+}

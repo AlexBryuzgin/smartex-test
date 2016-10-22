@@ -1,0 +1,44 @@
+<p class="title">Test App</p>
+<p class="name">List of users <span>(Click on the row to see more info)</span></p>
+<ul class="user-list">
+	<li ng-repeat="user in vm.users">
+		<span>{{user.name}}</span>
+	</li>
+</ul>
+<p class="name">Table of users info <span>(Click on the row to see more info)</span></p>
+<div class="table">
+	<div class="tr">
+		<div class="tc">
+			<span>Name</span>
+		</div>
+		<div class="tc">
+			<span>Username</span>
+		</div>
+		<div class="tc">
+			<span>Email</span>
+		</div>
+		<div class="tc">
+			<span>Phone</span>
+		</div>
+		<div class="tc">
+			<span>Website</span>
+		</div>
+	</div>
+	<div class="tr" ng-repeat="user in vm.users">
+		<div class="tc">
+			<span>{{user.name}}</span>
+		</div>
+		<div class="tc">
+			<span>{{user.username}}</span>
+		</div>
+		<div class="tc">
+			<span>{{user.email}}</span>
+		</div>
+		<div class="tc">
+			<span>{{user.phone}}</span>
+		</div>
+		<div class="tc">
+			<span>{{user.website}}</span>
+		</div>
+	</div>
+</div>
