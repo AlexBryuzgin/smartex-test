@@ -77,7 +77,6 @@
 .pop-up{
 	position: absolute;
 	width: 500px;
-	height: 5S00px;
 	padding: 10px;
 	background-color: #fff;
 	left: calc((100% - 500px) / 2);

@@ -31,6 +31,11 @@
 			vm.showflag = false;
 			localStorageService.clearAll();
 		};
+
+		/*
+		Writing the ID to local storage and watching, if it has a value
+		(for opening detalisation after refreshing/closing the page)
+		*/
 		vm.localId = localStorageService.get('userId');
 		$scope.$watch(function(){
 			return vm.localId
