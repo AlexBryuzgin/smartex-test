@@ -3,10 +3,10 @@
 		.module('app')
 		.controller('MainPageController', MainPageController);
 
-	MainPageController.$inject = ['$scope', 'restService', 'localStorageService'];
-	function MainPageController($scope, restService, localStorageService){
+	MainPageController.$inject = ['$scope', '$rootScope', 'restService', 'localStorageService'];
+	function MainPageController($scope, $rootScope, restService, localStorageService){
 		var vm = this;
-
+		vm.localId = null;
 		//get data from API
 		vm.users = [];
 		restService.getData()
