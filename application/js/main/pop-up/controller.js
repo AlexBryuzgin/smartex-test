@@ -14,5 +14,8 @@
 			.then(function(response){
  				vm.userData = response[id - 1];
 			});
+		vm.click = function(){
+			$location.path('/')
+		}
 	}
 }());
