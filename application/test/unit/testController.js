@@ -7,8 +7,10 @@ describe('MainPageController', function(){
 	it('Check Users', function(){
 		expect(ctrl.users).toBeDefined();
 		expect(ctrl.users[0].name).toBe('Leanne Graham');
-		// expect(ctrl.localId).toBeDefined();
-		// ctrl.goto(3);
-		// expect(ctrl.localId).toBe(3);
+	});
+	it('Check localId', function(){
+		expect(ctrl.localId).toBeDefined();
+		ctrl.goto(3);
+		expect(ctrl.localId).toBe(3);
 	})
 });
