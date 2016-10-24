@@ -48,29 +48,5 @@
 		</div>
 	</div>
 </div>
-<div class="black" ng-show="vm.showflag" ng-click="vm.closePopup()">
-	
-</div>
-<div class="pop-up" ng-show="vm.showflag">
-		<p class="name">{{vm.user.name}}(@{{vm.user.username}})</p>
-		<div class="info">
-			<p>Info</p>
-			<p>Phone: <span>{{vm.user.phone}}</span></p>
-			<p>Email: <span>{{vm.user.email}}</span></p>
-			<p>Website: <span>{{vm.user.website}}</span></p>
-		</div>
-		<div class="address">
-			<p>Address</p>
-			<p>City: <span>{{vm.user.address.city}}</span></p>
-			<p>Street: <span>{{vm.user.address.street}}</span></p>
-			<p>Suite: <span>{{vm.user.address.suite}}</span></p>
-			<p>Zipcode: <span>{{vm.user.address.zipcode}}</span></p>
-			<p>Geolocation: <span>[{{vm.user.address.geo.lat}}; {{vm.user.address.geo.lng}}]</span></p>
-		</div>
-		<div class="company">
-			<p>Company</p>
-			<p>Name: <span>{{vm.user.company.name}}</span></p>
-			<p>Catch Phrase: <span>{{vm.user.company.catchPhrase}}</span></p>
-			<p>BS: <span>{{vm.user.company.bs}}</span></p>
-		</div>
-	</div>
+
+<pop-up ng-show = 'vm.showflag'></pop-up>

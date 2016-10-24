@@ -3,8 +3,8 @@
 		.module('app')
 		.controller('MainPageController', MainPageController);
 
-	MainPageController.$inject = ['$scope', '$rootScope', 'restService', 'localStorageService'];
-	function MainPageController($scope, $rootScope, restService, localStorageService){
+	MainPageController.$inject = ['$scope', '$rootScope', 'restService', 'popUpService'];
+	function MainPageController($scope, $rootScope, restService, popUpService){
 		var vm = this;
 		vm.localId = null;
 		//get data from API
@@ -16,34 +16,39 @@
 			console.log(vm.users);
 		});
 		//show detalisation
-		vm.user = {};
+		//vm.user = {};
 		vm.showflag = false;
 		vm.goto = function(id){
 			vm.showflag = true;
-			localStorageService.set('userId', id);
-			if(localStorageService.get('userData') == undefined || localStorageService.get('userData') == null )
-				localStorageService.set('userData',  vm.users[id - 1]);
-			vm.user = localStorageService.get('userData');
+			popUpService.set(vm.users[id-1]);
+			// vm.user = vm.users[id-1];
+			// localStorageService.set('userId', id);
+			// if(localStorageService.get('userData') == undefined || localStorageService.get('userData') == null )
+			// 	localStorageService.set('userData',  vm.users[id - 1]);
+			// vm.user = localStorageService.get('userData');
 			console.log(vm.user);
+			var aaa = popUpService.get();
+			
 		};
 		//close pop-up detalisation window
 		vm.closePopup = function(){
 			vm.showflag = false;
-			localStorageService.clearAll();
+			popUpService.clear();
+			// localStorageService.clearAll();
 		};
 
 		/*
 		Writing the ID to local storage and watching, if it has a value
 		(for opening detalisation after refreshing/closing the page)
 		*/
-		vm.localId = localStorageService.get('userId');
-		$scope.$watch(function(){
-			return vm.localId
-		}, function(){
-			if(vm.localId != undefined){
-				console.log(vm.localId);
-				vm.goto(vm.localId);
-			};
-		});
+		// vm.localId = localStorageService.get('userId');
+		// $scope.$watch(function(){
+		// 	return vm.localId
+		// }, function(){
+		// 	if(vm.localId != undefined){
+		// 		console.log(vm.localId);
+		// 		vm.goto(vm.localId);
+		// 	};
+		// });
 	}
 }());

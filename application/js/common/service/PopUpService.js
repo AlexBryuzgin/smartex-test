@@ -7,6 +7,7 @@
 	function popUpService(){
 		this.set = setData;
 		this.get = getData;
+		this.clear = clearData;
 
 		var data = {};
 		function setData(newData){
@@ -14,6 +15,9 @@
 		}
 		function getData(){
 			return data;
+		}
+		function clearData(){
+			data = {};
 		}
 	}	
 }());
