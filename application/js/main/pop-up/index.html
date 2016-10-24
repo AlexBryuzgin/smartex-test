@@ -1,0 +1,26 @@
+<div class="black" ng-click="">
+	
+</div>
+<div class="pop-up">
+		<p class="name">{{vm.userData.name}}(@{{vm.userData.username}})</p>
+		<div class="info">
+			<p>Info</p>
+			<p>Phone: <span>{{vm.userData.phone}}</span></p>
+			<p>Email: <span>{{vm.userData.email}}</span></p>
+			<p>Website: <span>{{vm.userData.website}}</span></p>
+		</div>
+		<div class="address">
+			<p>Address</p>
+			<p>City: <span>{{vm.userData.address.city}}</span></p>
+			<p>Street: <span>{{vm.userData.address.street}}</span></p>
+			<p>Suite: <span>{{vm.userData.address.suite}}</span></p>
+			<p>Zipcode: <span>{{vm.userData.address.zipcode}}</span></p>
+			<p>Geolocation: <span>[{{vm.userData.address.geo.lat}}; {{vm.userData.address.geo.lng}}]</span></p>
+		</div>
+		<div class="company">
+			<p>Company</p>
+			<p>Name: <span>{{vm.userData.company.name}}</span></p>
+			<p>Catch Phrase: <span>{{vm.userData.company.catchPhrase}}</span></p>
+			<p>BS: <span>{{vm.userData.company.bs}}</span></p>
+		</div>
+	</div>

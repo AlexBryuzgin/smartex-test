@@ -8,6 +8,11 @@
 					controller: 'MainPageController',
 					controllerAs: "vm"
 				})
+				.when('/:userId', {
+					templateUrl: '/application/js/main/pop-up/index.html',
+					controller: 'PopUpController',
+					controllerAs: "vm"
+				})
 		})
 		.config(function(localStorageServiceProvider){
         	localStorageServiceProvider
