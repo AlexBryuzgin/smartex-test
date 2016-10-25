@@ -6,7 +6,9 @@
 	PopUpController.$inject = ['$location','$scope','localStorageService', 'restService'];
 	function PopUpController($location, $scope, localStorageService, restService){
 		var vm = this;
-		var id = localStorageService.get('userId');
+		var id = $location.path().slice(1);
+		// id.slice(1);
+		// console.log(id);
 		vm.userData = {};
 		restService.getData()
 			.$promise
