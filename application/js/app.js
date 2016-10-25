@@ -1,17 +1,20 @@
 (function(){
 	angular
-		.module('app', ['ngRoute', 'ngResource', 'ngAnimate', 'LocalStorageModule'])
-		.config(function($routeProvider){
-			$routeProvider
-				.when('/', {
+		.module('app', ['ui.router', 'ngResource', 'ngAnimate', 'LocalStorageModule'])
+		.config(function($stateProvider, $urlRouterProvider){
+			$urlRouterProvider.otherwise('/main');
+			$stateProvider
+				.state('main', {
+					url:'/main',
 					templateUrl: '/application/js/main/index.html',
 					controller: 'MainPageController',
-					controllerAs: "vm"
+					controllerAs: 'vm'
 				})
-				.when('/:userId', {
+				.state('main.id', {
+					url:'/:userId',
 					templateUrl: '/application/js/main/pop-up/index.html',
 					controller: 'PopUpController',
-					controllerAs: "vm"
+					controllerAs: 'vm'
 				})
 		})
 		.config(function(localStorageServiceProvider){

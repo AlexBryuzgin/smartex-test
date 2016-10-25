@@ -16,7 +16,7 @@ gulp.task('concat-js', function () {
             , './bower_components/angular-aria/angular-aria.js'
             , './bower_components/angular-mocks/angular-mocks.js'
             , './bower_components/jquery/dist/jquery.js'
-            , './bower_components/angular-route/angular-route.js'
+            , './bower_components/angular-ui-router/release/angular-ui-router.js'
             , './bower_components/angular-resource/angular-resource.js'
             , './bower_components/angular-local-storage/dist/angular-local-storage.js'
 

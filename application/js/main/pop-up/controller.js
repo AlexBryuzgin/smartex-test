@@ -3,10 +3,11 @@
 		.module('app')
 		.controller('PopUpController', PopUpController);
 
-	PopUpController.$inject = ['$location','$scope','localStorageService', 'restService'];
-	function PopUpController($location, $scope, localStorageService, restService){
+	PopUpController.$inject = ['$location', '$state','$scope','localStorageService', 'restService'];
+	function PopUpController($location, $state, $scope, localStorageService, restService){
 		var vm = this;
-		var id = $location.path().slice(1);
+		var id = $location.path().slice(6);
+		console.log(id)
 		// id.slice(1);
 		// console.log(id);
 		vm.userData = {};
@@ -16,7 +17,7 @@
  				vm.userData = response[id - 1];
 			});
 		vm.click = function(){
-			$location.path('/')
+			$state.go('main')
 		}
 	}
 }());

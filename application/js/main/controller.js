@@ -3,8 +3,8 @@
 		.module('app')
 		.controller('MainPageController', MainPageController);
 
-	MainPageController.$inject = ['$scope', '$rootScope', '$location', 'restService', 'localStorageService'];
-	function MainPageController($scope, $rootScope, $location, restService, localStorageService){
+	MainPageController.$inject = ['$scope', '$rootScope', '$state', 'restService', 'localStorageService'];
+	function MainPageController($scope, $rootScope, $state, restService, localStorageService){
 		var vm = this;
 		//get data from API
 		vm.users = [];
@@ -16,8 +16,7 @@
 		});
 		//show detalisation
 		vm.goto = function(id){
-			var path = '/' + id;
-			$location.path(path);	
+			$state.go('main.id', {userId: id});	
 		};
 	}
 }());
