@@ -18,6 +18,11 @@
  				vm.userData = response.filter(function(val){
  					return val.id == id;
  				})[0];
+ 				if(vm.userData == {} || vm.userData == undefined){
+ 					$state.go('main');
+ 					alert('no user with such ID');
+
+ 				}
 			});
 		vm.click = function(){
 			$state.go('main')
