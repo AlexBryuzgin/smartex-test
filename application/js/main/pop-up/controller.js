@@ -14,7 +14,10 @@
 		restService.getData()
 			.$promise
 			.then(function(response){
- 				vm.userData = response[id - 1];
+ 				// vm.userData = response[id - 1];
+ 				vm.userData = response.filter(function(val){
+ 					return val.id == id;
+ 				})[0];
 			});
 		vm.click = function(){
 			$state.go('main')
